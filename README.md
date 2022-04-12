@@ -1,4 +1,4 @@
-**#### MEMORY GAME**
+# **MEMORY GAME**
 
 CSE1500 web大作业，基于原生js + Node实现。
 
@@ -6,7 +6,7 @@ CSE1500 web大作业，基于原生js + Node实现。
 
 开发审美不在线，CSS不会写，amination也很糟糕，蒟蒻求轻拍QAQ
 
-**##### HOW TO START**
+## **HOW TO START**
 
 在Node.js和npm环境下，cd至项目目录，输入以下命令
 
