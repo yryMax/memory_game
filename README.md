@@ -15,4 +15,4 @@ npm install
 npm start
 ```
 
-访问http://localhost:3002即可开始游戏~
+访问http://localhost:3002 即可开始游戏~
