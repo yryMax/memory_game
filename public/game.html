@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" href="images/logo.png">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="stylesheets/game.css" />
+  </head>
+
+  <body>
+        <main>
+          <div class="wrapper">
+            <aside class = "left">     
+                <ul style="list-style-type:none;">
+                  <li>You</li>
+                  <li>Score: <span class="score">0</span></li>
+                  <li>
+                    <div id="yourTurn">your turn</div>
+                    <div class="timer">00:00</div>
+                  </li>
+                </ul>
+            </aside>
+            <section class="main_wrapper">
+                <div id="1" class = "card"></div>
+                <div id="2" class = "card"></div>
+                <div id="3" class = "card"></div>
+                <div id="4" class = "card"></div>
+                <div id="5" class = "card"></div>
+                <div id="6" class = "card"></div>
+                <div id="7" class = "card"></div>
+                <div id="8" class = "card"></div>
+                <div id="9" class = "card"></div>
+                <div id="10" class = "card"></div>
+                <div id="11" class = "card"></div>
+                <div id="12" class = "card"></div>
+                <div id="13" class = "card"></div>
+                <div id="14" class = "card"></div>
+                <div id="15" class = "card"></div>
+                <div id="16" class = "card"></div>
+            </section>
+            <section id="popup"></section>
+            <aside class = "right">     
+                <ul style="list-style-type:none;">
+                <li>Your opponent</li>
+                <li>Score: <span class="score">0</span></li>
+                <li>
+                  <div id="opTurn">your opponent's turn</div>
+                  <div class="timer">00:00</div>
+                </li>
+                </ul>
+            </aside>
+          </div>
+        </main>
+    <script src="javascripts/message.js"></script>
+    <script src="javascripts/ui.js"></script>
+    <script src="javascripts/interaction.js"></script>
+  </body>
+</html>

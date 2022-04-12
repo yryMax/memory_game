@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="stylesheets/splash.css" />
+  </head>
+  <body>
+    <main>
+      <div class="wrapper">
+            <div id="play_button">
+                <form action="/play" method="get">
+                    <button id="play" type="submit">Play now</button>
+                  </form>
+                </div>
+            
+            <section id ='how_to_play'>how to play</section>
+        
+            <section id = "statistics">
+                <ul>
+                    <li><%= gamesOngoing %> games in play</li>
+                    <li><%= gamesCompleted %> games completed</li>
+                    <li><%= visitors %> visitors in total</li>
+                </ul>
+            </section>
+
+            <div id="dialog-info">
+                <p>this game requires players to match similar delft blue pottery pictures. There are 16 pictures in a display, composed of 8 pairs, face down in random order. Each person turns over two cards at a time, to turn over a matching pair, by using their memory. if the pair matches, the player gets one score, and he will get a chance to turn another pair, if the pair doesn't match, his opponent gets the chance to flip cards. once all pictures are matched, the game is over, and the player with a higher score is the winner.</p>
+                <button>close</button>
+            </div>
+      </div>
+    </main>
+  </body>
+</html>

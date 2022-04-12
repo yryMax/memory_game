@@ -1,0 +1,23 @@
+html,
+body,
+main {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  font: 14px "American Typewriter", serif;
+}
+@media (max-width: 1400px), (max-height: 1000px) {
+  body::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    font-size: 20px;
+    padding: 20px;
+    color: white;
+    content: "Your window is too small (at least 1400x1000px is expected) to play this game. Enlarge the browser window or zoom out to play or disable the CSS @media query.";
+    background-color: black;
+    z-index: 100;
+  }
+}

@@ -1,0 +1,99 @@
+@import "style.css";
+.wrapper {
+    background-image: url('/images/bk1.png');
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+
+}
+#play_button {
+    margin-top: 55vh;
+    height: 200px;
+}
+#play {
+    background: url("/images/play.png") no-repeat scroll 0 0 transparent;
+    background-position: center;
+    background-size: cover;
+    font-size: 60px;
+    font-weight: 500;
+    border-width: 20px;
+    border-color: #3231b0;
+    border-radius: 15px;
+    color: #3231b0;
+    border-image: none;
+    cursor: pointer;
+    z-index: 1;
+    animation: myAnimation 1s linear infinite;
+}
+@keyframes myAnimation {
+    0% {
+        font-size: 60px;
+    }
+    50% {
+      font-size: 80px;
+    }
+    100% {
+        font-size: 60px;
+    }
+  }
+button:hover {
+    text-decoration: underline;
+}
+#how_to_play {
+    cursor: pointer;
+    font-size: 25px;
+    color: #2231ca;
+    text-decoration: underline;
+}
+#statistics {
+    margin-top: 3vh;
+}
+ul{
+    list-style-type: none;
+    text-align: center;
+}
+li{
+    display: inline-block;
+    font-size: 30px;
+    padding: 50px;
+    font-family: 'American Typewriter',serif;
+    color: #2231ca;
+}
+#dialog-info {
+    font-family: "Lucida Grande";
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border:2px solid black;
+    height: 600px;
+    width: 500px;
+    z-index: 1;
+    padding:10px 50px 10px 50px;
+    border-radius: 20px;
+    font-size: 20px;
+    background-color: #f0f0f0;
+    box-shadow: 5px 5px 5px #cccccc;
+}
+p{
+    text-align: left;
+}
+#cls{
+    margin: 17px;
+    font-size: 20px;
+    font-weight: 200;
+    width: 100px;
+    height: 30px;
+    border-image: none;
+    border-radius: 15px;
+    cursor: pointer;
+    z-index: 1;
+}
+p::before{
+    content: "\2736   ";
+}
