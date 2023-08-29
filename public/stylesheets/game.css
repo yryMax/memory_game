@@ -67,6 +67,9 @@ li {
 .card:hover {
   box-shadow: 5px 10px 5px #888888
 }
+.card.no-hover:hover {
+  box-shadow: none;
+}
 #popup{
   position: absolute;
   font-family: "Lucida Grande";

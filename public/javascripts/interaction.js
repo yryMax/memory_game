@@ -59,7 +59,7 @@ socket.onmessage = function (event){
         });
     }
     gameState.init();//show all the info
-    gameState.checkWinner();//theck if their is a winner，if it is ,show it on the web
+    gameState.checkWinner();//theck if there is a winner，if it is ,show it on the web
 }
 function clickCard(index){//user movement
     if(me.isActive == false)return;//only the active user can make the move

@@ -8,20 +8,24 @@ function GameBoard(){
         this.cards = cards;
     }
     this.showCards = function(){
-        /*TODO
+        /*
         show the cards according to their status
         */
        for(let i = 0;i<this.cards.length;i++){
            let url = "/images/";
            url += this.status[i] == 0? 0:this.cards[i];
            url += ".jpg";
-           console.log(url);
-           if(this.status[i] == -1)url = "";
+          // console.log(url);
+           if(this.status[i] == -1){
+               let el = document.getElementById(i+1);
+               if(!el.classList.contains("no-hover"))el.classList.add("no-hover");
+               url = "";
+           }
            document.getElementById(i+1).style.backgroundImage = "url(" + url + ")";
        }
     }
     this.flipCards = function(index){
-        /*TODO
+        /*
         try to flip a card, if the flip is valid, return a positive sign
         */
        if(this.status[index] != 0)return false;
@@ -32,7 +36,7 @@ function GameBoard(){
         return this.status.filter(num => num == 1).length == 2;
     }
     this.cancelCards = function(){
-        /*TODO
+        /*
         only be called when there is actually two card flipped,
         if the two cards are same set there dom element invisable, return a positive sign.
         */
@@ -81,7 +85,7 @@ function Player(type){//indicate the player is me(0)/opponent(1)
     this.type = type;
     this.intervalID;
     this.switchCounter = function(){
-        /*TODO
+        /*
         if the player is the current mover, clear the interval
         if the player is the next mover, set the interval
         show the timer on the board
@@ -105,7 +109,7 @@ function Player(type){//indicate the player is me(0)/opponent(1)
         console.log(this.isActive);
     }
     this.showScore = function(){
-        /*TODO
+        /*
         increase the this player's score by one
         show it on the dom
         */
@@ -125,7 +129,7 @@ function GameState(me,opponent,gameBoard){
     this.opponent = opponent;
     this.gameBoard = gameBoard;
     this.init = function(){
-        /*TODO
+        /*
         when the state is updated (come from the server)
         fresh everything on the webpage.
         */
@@ -142,7 +146,7 @@ function GameState(me,opponent,gameBoard){
        }
     }
     this.checkWinner = function(){
-        /*TODO
+        /*
         when sum of the two player's score is equal to 8
         if the game ends, use a popup to indicate who is the winner
         */

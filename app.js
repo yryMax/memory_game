@@ -25,9 +25,9 @@ app.get("/play", function (req, res) {
   res.sendFile("game.html", {root: "./public"});
 });
 app.get("/", function (req, res) {
-  console.log(gameState.checkOngoingGame());
-  console.log(gameState.checkCompletedGame());
-  console.log(visitors)
+  //console.log(gameState.checkOngoingGame());
+  //console.log(gameState.checkCompletedGame());
+  //console.log(visitors)
   res.render("splash.ejs", {
     gamesOngoing: gameState.checkOngoingGame(),
     gamesCompleted: gameState.checkCompletedGame(),
