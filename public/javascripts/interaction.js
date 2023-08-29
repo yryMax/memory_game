@@ -27,8 +27,10 @@ const socket = new WebSocket("ws://localhost:3002");
 socket.onmessage = function (event){
     let incomingMsg = JSON.parse(event.data);
     if(incomingMsg.aborted == true){//check if the other user quit the game
-        let ele = document.getElementById("popup");
+        let ele = document.getElementById("winner_status");
         ele.innerHTML = "GAME ABORTED!";
+        let back = document.getElementById("back_button");
+        back.style.visibility = "visible";
         return;
     }
     if(incomingMsg.wait == true)return; // still waiting

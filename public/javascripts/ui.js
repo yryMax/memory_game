@@ -150,7 +150,7 @@ function GameState(me,opponent,gameBoard){
         when sum of the two player's score is equal to 8
         if the game ends, use a popup to indicate who is the winner
         */
-       let ele = document.getElementById("popup");
+       let ele = document.getElementById("winner_status");
  //      console.log(ele);
        if(this.me.score + this.opponent.score == 8){
            if(this.me.score>this.opponent.score){
@@ -163,6 +163,8 @@ function GameState(me,opponent,gameBoard){
           else {
               ele.innerHTML = "DRAW";
           }
+           let back = document.getElementById("back_button");
+           back.style.visibility = "visible";
         //disable the timer.
         this.me.isActive = false;
         this.opponent.isActive = false;
