@@ -106,5 +106,5 @@ wss.on("connection", function connection(ws) {
   });
 
 });
-server.listen(port);
+server.listen(process.env.PORT || port);
 
