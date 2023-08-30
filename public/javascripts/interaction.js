@@ -31,6 +31,10 @@ socket.onmessage = function (event){
         ele.innerHTML = "GAME ABORTED!";
         let back = document.getElementById("back_button");
         back.style.visibility = "visible";
+        gameState.me.isActive = false;
+        gameState.opponent.isActive = false;
+        clearInterval(gameState.me.intervalID);
+        clearInterval(gameState.opponent.intervalID);
         return;
     }
     if(incomingMsg.wait == true)return; // still waiting
